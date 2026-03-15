@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 class StringBufferExample
-{
+{ 
     public static void main(String[] args) {
         // StringBuffer s= new StringBuffer();
         // System.out.println("Initial capacity of string1: "+s.capacity());
