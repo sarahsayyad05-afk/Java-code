@@ -1,0 +1,73 @@
+ import java.util.Scanner;
+public class sumofnumbers
+{
+    public static void main(String args[])
+    {   Scanner  sc=new Scanner(System.in);
+        System.out.println("write a program to print sum of first 100 natural number");
+        int i=1,sum=0;
+        while (i<=100)
+        {
+            sum+=i;
+            i++;
+
+        }
+         System.out.println("sum of 100 numbers= "+sum);
+
+        System.out.println("print first 20 odd natural numbers and their sum");
+        int a=1;
+        int sum1=0; 
+        while (a<=40)
+        {
+            if (a%2!=0)
+            {
+                System.out.println(a);
+                
+                sum1+=a;
+                
+            
+        
+        
+            }
+            a++;
+           
+            
+            
+        }
+        System.out.println("sum of odd numbers= "+sum1);
+        System.out.println("count number of didgits in given number");
+        int a1=0;
+        System.out.println("enter a number=");
+        int num=sc.nextInt();
+        while(num>0)
+        {
+            a1+=1;
+            num/=10;
+
+        }
+        System.out.println("sum of didgits in given number");
+        int sum2=0,r=0;
+        System.out.println("enter a number=");
+        int num1=sc.nextInt();
+        while(num1>0)
+        {
+            r=num1%10;
+            sum2+=r;
+            num1/=10;
+
+
+        }
+        System.out.println("sum of digits in number= "+sum2);
+        
+        
+
+
+       
+       
+
+
+        
+
+        
+
+    }
+}
