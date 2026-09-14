@@ -1,0 +1,122 @@
+@charset "UTF-8";
+
+
+.content {
+    padding: 40px 20px;
+}
+
+.profile-wrapper {
+    max-width: 460px;
+    margin: 0 auto;
+}
+
+.profile-wrapper .card {
+    display: block;               /* overrides div:has(img) flex */
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-hover);
+    padding: 40px 34px;
+    text-align: center;
+}
+
+.card .avatar-ring {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid var(--primary-light);
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: var(--page-bg);
+}
+
+.card .avatar-ring img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex: none;                   /* overrides div:has(img) img flex-basis */
+    max-width: none;              /* overrides div:has(img) img max-width */
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.card .avatar-ring span {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+.card .username {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--primary-dark);
+    margin: 0 0 28px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.card .info-list {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 32px;
+}
+
+.card .info-list .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    background-color: var(--page-bg);
+    border-left: 4px solid var(--primary);
+    border-radius: var(--radius);
+    padding: 12px 18px;
+}
+
+.card .info-list .row .label {
+    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--primary-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin: 0;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.card .info-list .row .value {
+    font-weight: 500;
+    font-size: 1rem;
+    color: var(--text);
+    margin: 0;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    text-align: right;
+}
+
+.card .logout-btn {
+    display: inline-block;
+    padding: 11px 32px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    box-shadow: 0 3px 8px rgba(13, 71, 161, 0.3);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.card .logout-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 14px rgba(13, 71, 161, 0.4);
+    text-decoration: none;
+}

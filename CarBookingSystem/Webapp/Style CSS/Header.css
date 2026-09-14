@@ -1,0 +1,119 @@
+/* ============================================================
+   Header.css
+   Styling for the shared nav bar in Header.jsp. Reuses the
+   --primary / --card-bg / --shadow variables from Style.css.
+   ============================================================ */
+
+.site-nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 20px 6px;
+    margin: 0 0 8px 0;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+}
+
+.nav-links a {
+    display: inline-block;
+    margin: 4px 2px;
+    padding: 8px 16px;
+    border-radius: 20px;
+    color: var(--primary-dark);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-links a:hover {
+    background-color: var(--primary);
+    color: #ffffff;
+}
+
+/* Circular profile avatar + "My Profile" caption, pulled out of
+   normal flow and pinned to the corner so its height doesn't
+   stretch the row the links sit in - that's what was pushing the
+   links down and adding extra space before the Welcome line. */
+.nav-profile {
+    position: absolute;
+    top: 4px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+}
+
+/* "Welcome, <username>" - with the generic card look (white bg,
+   shadow, padding) stripped off so it sits tight underneath. */
+.site-nav > p {
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 4px 0 0 0 !important;
+    font-size: 0.9rem;
+}
+
+.site-nav > p b {
+    color: var(--primary-dark);
+}
+
+@media (max-width: 700px) {
+    .nav-profile {
+        position: static;
+        margin-top: 10px;
+    }
+}
+
+.nav-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 2px solid var(--primary-light);
+    background-color: #ffffff;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.nav-avatar-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--page-bg);
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--primary-dark);
+}
+
+.nav-profile-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-dark);
+    text-decoration: none;
+    line-height: 1;
+    margin: 0;
+}
+
+.nav-profile-link:hover {
+   background-color: var(--primary);
+    color: #ffffff;;
+    text-decoration: underline;
+}
